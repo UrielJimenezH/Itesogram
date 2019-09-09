@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".activities.SaveInParse">
+
+    <!--ES NECESARIA LA GUIDELINE???-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_save_in_parse_g_50_v"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_save_in_parse_til_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/activity_save_in_parse_til_value_hint"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/activity_save_in_parse_btn_save_value"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_save_in_parse_et_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_save_in_parse_btn_save_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_save_in_parse_btn_save_value"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/activity_save_in_parse_til_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/activity_save_in_parse_tv_value"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_save_in_parse_tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_save_in_parse_tv_no_value"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_save_in_parse_btn_save_value"
+        app:layout_constraintBottom_toTopOf="@id/activity_save_in_parse_btn_get_value"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_save_in_parse_btn_get_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_save_in_parse_btn_get_value"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_save_in_parse_tv_value"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

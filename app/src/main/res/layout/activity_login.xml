@@ -1,85 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    android:padding="20dp"
+    tools:context=".activities.Login">
 
+    <!--ES NECESARIA LA GUIDELINE???-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/activity_login_g_50_v"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".5"/>
+        app:layout_constraintGuide_percent=".5" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/activity_login_iv_logo"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:src="@drawable/itesogram"
-        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_til_email"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/activity_login_et_email"/>
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/activity_login_et_email"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_login_til_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/activity_login_et_email"
+        android:hint="@string/activity_login_til_email_hint"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_til_password"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/activity_login_iv_logo"
-        app:layout_constraintBottom_toTopOf="@id/activity_login_et_password"/>
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/activity_login_et_password"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_login_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_login_til_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/activity_login_et_password"
+        android:hint="@string/activity_login_til_password_hint"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/activity_login_et_email"
-        app:layout_constraintBottom_toTopOf="@id/activity_login_btn_login"/>
+        app:layout_constraintTop_toBottomOf="@id/activity_login_til_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_login_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/activity_login_btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/activity_login_btn_login"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_tv_forgot_login_data"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/activity_login_et_password"
-        app:layout_constraintBottom_toTopOf=""/>
+        app:layout_constraintTop_toBottomOf="@id/activity_login_til_password"/>
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/activity_login_tv_forgot_login_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="@string/activity_login_tv_forgot_login_data"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/activity_login_tv_not_account"
         app:layout_constraintEnd_toStartOf="@id/activity_login_tv_get_help"
-        app:layout_constraintTop_toBottomOf="@id/activity_login_btn_login"
-        app:layout_constraintBottom_toTopOf=""/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_btn_login" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/activity_login_tv_get_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activity_login_tv_get_help"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/activity_login_tv_forgot_login_data"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/activity_login_tv_forgot_login_data"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/activity_login_tv_forgot_login_data"
-        app:layout_constraintBottom_toBottomOf="@id/activity_login_tv_forgot_login_data"/>
+        app:layout_constraintStart_toEndOf="@+id/activity_login_tv_forgot_login_data"
+        app:layout_constraintTop_toTopOf="@id/activity_login_tv_forgot_login_data" />
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_tv_not_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/activity_login_tv_not_account"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_login_tv_register"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_login_tv_register"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/activity_login_tv_not_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_login_tv_not_account"
+        app:layout_constraintTop_toTopOf="@id/activity_login_tv_not_account" />
 </androidx.constraintlayout.widget.ConstraintLayout>

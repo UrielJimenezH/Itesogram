@@ -1,4 +1,4 @@
-package com.uriel.itesogram
+package com.uriel.itesogram.config
 
 import com.parse.Parse
 import android.app.Application
