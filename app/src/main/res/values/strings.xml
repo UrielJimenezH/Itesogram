@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Itesogram</string>
+
+    <string name="activity_login_et_email">Teléfono, correo electronico o usuario</string>
+    <string name="activity_login_et_password">Contraseña</string>
+    <string name="activity_login_btn_login">Iniciar sesión</string>
+    <string name="activity_login_tv_forgot_login_data">¿Olvidaste tus datos de inicio de sesión?</string>
+    <string name="activity_login_tv_get_help">Obtén ayuda</string>
+    <string name="activity_login_tv_not_account">¿No tienes cuenta?</string>
+    <string name="activity_login_tv_register">Registrate</string>
 </resources>
