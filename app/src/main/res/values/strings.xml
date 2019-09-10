@@ -13,4 +13,12 @@
     <string name="activity_save_in_parse_btn_save_value">Guardar en parse</string>
     <string name="activity_save_in_parse_tv_no_value">No se ha pedido el valor</string>
     <string name="activity_save_in_parse_btn_get_value">Obtener valor</string>
+
+    <string name="activity_register_til_email_hint">Correo electrónico</string>
+    <string name="activity_register_til_name_hint">Nombre</string>
+    <string name="activity_register_til_password_hint">Contraseña</string>
+    <string name="activity_register_rbtn_female">Femenino</string>
+    <string name="activity_register_rbtn_male">Masculino</string>
+    <string name="activity_register_rbtn_other">Otro</string>
+    <string name="activity_register_btn_register">Registrar</string>
 </resources>
