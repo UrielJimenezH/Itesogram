@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.uriel.itesogram">
+    package="com.uriel.fragments">
 
     <application
-        android:name=".config.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.main.ActivityMain"></activity>
-        <activity android:name=".activities.ActivityRegister" />
-        <activity android:name=".activities.SaveInParse" />
-        <activity android:name=".activities.ActivityLogin">
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

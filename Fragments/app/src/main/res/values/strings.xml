@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fragments</string>
+
+    <!--Fragment Home-->
+    <string name="fragment_home_txt_home">Home</string>
+    <string name="fragment_search_txt_search">Search</string>
+    <string name="fragment_profile_txt_profile">Profile</string>
+
+    <!--Activity Menu-->
+    <string name="menu_home">Home</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_profile">Profile</string>
+</resources>
